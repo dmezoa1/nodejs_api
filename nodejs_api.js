@@ -2,16 +2,16 @@ const express = require('express')
 const oracledb = require('oracledb');
 const bodyparser = require('body-parser');
 const error_handler = require('errorhandler');
+require('dotenv').config();
 
 const app = express();
 const parser = bodyparser.json();
 
-const port = 50080;
-var password = 'Fit_007!JupMerken';
+const port = 40080;
 
 db_config= {
-      user: "fitstudy",
-      password: password,
+      user: process.env.USER,
+      password: process.env.PSW,
       connectString: "lxadxd33:2430/INFRA3"
 }
 
